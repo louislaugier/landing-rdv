@@ -15,30 +15,37 @@ import Home from './components/Home'
 
 import Testimonials from './components/Testimonials'
 import Testimonials2 from './components/Testimonials/index2'
-import Testimonials3 from './components/Testimonials/index3'
 
 import Pricing from './components/Pricing'
 
 export const App = () => {
+	const calendlyProps: any = {
+		url: "https://calendly.com/l-laugier/30min",
+		rootElement: document.getElementById("root"),
+		text: "Click here to schedule!",
+		textColor: "#ffffff",
+		color: "#00a2ff"
+	}
 	return (
 		<ChakraProvider theme={theme}>
 			<Header/>
 
 			<Home/>
 
-			<InlineWidget url="https://calendly.com/l-laugier/30min" />
+			<InlineWidget
+				{...calendlyProps}
+			/>
 
 			<Pricing/>
 
 			<Features/>
+			
 			<Features2/>
 			<Features3/>
 			<Features4/>
 
 			<Testimonials/>
 			<Testimonials2/>
-			<Testimonials3/>
-
 
 			<Footer/>
 		</ChakraProvider>
