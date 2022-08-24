@@ -4,19 +4,19 @@ import { InlineWidget } from "react-calendly"
 
 import Header from './components/Header'
 
+import Home from './components/Home'
+
+import Pricing from './components/Pricing'
+
 import Features from './components/Features'
 import Features2 from './components/Features/index2'
 import Features3 from './components/Features/index3'
 import Features4 from './components/Features/index4'
 
-import Footer from './components/Footer'
-
-import Home from './components/Home'
-
 import Testimonials from './components/Testimonials'
 import Testimonials2 from './components/Testimonials/index2'
 
-import Pricing from './components/Pricing'
+import Footer from './components/Footer'
 
 export const App = () => {
 	const calendlyProps: any = {
@@ -26,6 +26,7 @@ export const App = () => {
 		textColor: "#ffffff",
 		color: "#00a2ff"
 	}
+
 	return (
 		<ChakraProvider theme={theme}>
 			<Header/>
@@ -39,7 +40,7 @@ export const App = () => {
 			<Pricing/>
 
 			<Features/>
-			
+
 			<Features2/>
 			<Features3/>
 			<Features4/>
