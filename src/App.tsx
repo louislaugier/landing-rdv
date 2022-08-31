@@ -4,6 +4,9 @@ import { InlineWidget } from "react-calendly"
 
 import Header from './components/Header'
 
+import ChangingText from './components/ChangingText'
+
+
 import Home from './components/Home'
 
 import Pricing from './components/Pricing'
@@ -30,6 +33,8 @@ export const App = () => {
 	return (
 		<ChakraProvider theme={theme}>
 			<Header/>
+
+			<ChangingText/>
 
 			<Home/>
 
