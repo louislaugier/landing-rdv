@@ -4,14 +4,10 @@ import { InlineWidget } from "react-calendly"
 
 import Header from './components/Header'
 
-import ChangingText from './components/ChangingText'
-
-
 import Home from './components/Home'
 
 import Pricing from './components/Pricing'
 
-import Features from './components/Features'
 import Features2 from './components/Features/index2'
 import Features3 from './components/Features/index3'
 import Features4 from './components/Features/index4'
@@ -23,7 +19,7 @@ import Footer from './components/Footer'
 
 export const App = () => {
 	const calendlyProps: any = {
-		url: "https://calendly.com/l-laugier/30min",
+		url: process.env.REACT_APP_CALENDLY_URL,
 		rootElement: document.getElementById("root"),
 		text: "Click here to schedule!",
 		textColor: "#ffffff",
@@ -34,8 +30,6 @@ export const App = () => {
 		<ChakraProvider theme={theme}>
 			<Header/>
 
-			<ChangingText/>
-
 			<Home/>
 
 			<InlineWidget
@@ -43,8 +37,6 @@ export const App = () => {
 			/>
 
 			<Pricing/>
-
-			<Features/>
 
 			<Features2/>
 			<Features3/>

@@ -21,9 +21,9 @@ export default function Header() {
 				</Flex>
 
 				<Stack flex={{ base: 1, md: 0 }} justify={'flex-end'} direction={'row'} spacing={6}>
-					<Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'}>
+					{/* <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'}>
 						Sign In
-					</Button>
+					</Button> */}
 					<Button
 						display={{ base: 'none', md: 'inline-flex' }}
 						fontSize={'sm'}
@@ -34,7 +34,7 @@ export default function Header() {
 							bg: 'pink.300'
 						}}
 					>
-						Sign Up
+						Prendre rendez-vous
 					</Button>
 				</Stack>
 			</Flex>
