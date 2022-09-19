@@ -1,6 +1,8 @@
 import { ChakraProvider, theme } from '@chakra-ui/react'
 
-import { InlineWidget } from "react-calendly"
+import { InlineWidget, PopupWidget } from 'react-calendly'
+
+import './App.css'
 
 import Header from './components/Header'
 
@@ -20,32 +22,31 @@ import Footer from './components/Footer'
 export const App = () => {
 	const calendlyProps: any = {
 		url: process.env.REACT_APP_CALENDLY_URL,
-		rootElement: document.getElementById("root"),
-		text: "Click here to schedule!",
-		textColor: "#ffffff",
-		color: "#00a2ff"
+		rootElement: document.getElementById('root'),
+		text: 'Prendre rendez-vous',
+		textColor: '#ffffff',
+		color: '#00a2ff'
 	}
 
 	return (
 		<ChakraProvider theme={theme}>
-			<Header/>
+			<Header />
 
-			<Home/>
+			<Home />
 
-			<InlineWidget
-				{...calendlyProps}
-			/>
+			<InlineWidget {...calendlyProps} />
+			<PopupWidget {...calendlyProps} />
 
-			<Pricing/>
+			<Pricing />
 
-			<Features2/>
-			<Features3/>
-			<Features4/>
+			{/* <Features2/> */}
+			<Features3 />
+			<Features4 />
 
-			<Testimonials/>
-			<Testimonials2/>
+			<Testimonials />
+			<Testimonials2 />
 
-			<Footer/>
+			<Footer />
 		</ChakraProvider>
 	)
 }

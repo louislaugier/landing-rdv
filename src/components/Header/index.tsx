@@ -160,41 +160,51 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
 	{
-		label: 'Offre',
+		label: 'Produits',
 		children: [
 			{
 				label: 'Site web clé-en-main',
-				subLabel: 'Trending Design to inspire you',
+				subLabel: 'Prêt à l\'utilisation en 72h & prix abordable',
 				href: '#'
 			},
 			{
 				label: 'Site web sur-mesure',
-				subLabel: 'Up-and-coming Designers',
+				subLabel: 'Un site web réellement à la carte',
 				href: '#'
 			}
 		]
 	},
 	{
-		label: 'Find Work',
-		children: [
-			{
-				label: 'Job Board',
-				subLabel: 'Find your dream design job',
-				href: '#'
-			},
-			{
-				label: 'Freelance Projects',
-				subLabel: 'An exclusive list for contract work',
-				href: '#'
-			}
-		]
-	},
-	{
-		label: 'Learn Design',
+		label: 'Pricing',
 		href: '#'
 	},
 	{
-		label: 'Hire Designers',
+		label: 'Ressources',
+		children: [
+			{
+				label: 'À propos',
+				subLabel: 'Qui sommes-nous',
+				href: '#'
+			},
+			{
+				label: 'Mentions légales',
+				subLabel: 'facteurweb.fr',
+				href: '#'
+			},
+			{
+				label: 'Témoignages',
+				subLabel: 'Les retours des clients',
+				href: '#'
+			},
+			{
+				label: 'Emplois',
+				subLabel: 'Intégrer facteurweb.fr',
+				href: '#'
+			},
+		]
+	},
+	{
+		label: 'Support',
 		href: '#'
 	}
 ]
