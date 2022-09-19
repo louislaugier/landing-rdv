@@ -164,7 +164,7 @@ const NAV_ITEMS: Array<NavItem> = [
 		children: [
 			{
 				label: 'Site web clé-en-main',
-				subLabel: 'Prêt à l\'utilisation en 72h & prix abordable',
+				subLabel: 'Abordable et livré rapidement',
 				href: '#'
 			},
 			{
@@ -181,11 +181,11 @@ const NAV_ITEMS: Array<NavItem> = [
 	{
 		label: 'Ressources',
 		children: [
-			{
-				label: 'À propos',
-				subLabel: 'Qui sommes-nous',
-				href: '#'
-			},
+			// {
+			// 	label: 'À propos',
+			// 	subLabel: 'Qui sommes-nous ?',
+			// 	href: '#'
+			// },
 			{
 				label: 'Mentions légales',
 				subLabel: 'facteurweb.fr',
@@ -193,7 +193,12 @@ const NAV_ITEMS: Array<NavItem> = [
 			},
 			{
 				label: 'Témoignages',
-				subLabel: 'Les retours des clients',
+				subLabel: 'Les retours client',
+				href: '#'
+			},
+			{
+				label: 'FAQ',
+				subLabel: 'Frequently asked questions',
 				href: '#'
 			},
 			{

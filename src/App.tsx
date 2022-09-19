@@ -9,6 +9,7 @@ import Header from './components/Header'
 import Home from './components/Home'
 
 import Pricing from './components/Pricing'
+import Pricing2 from './components/Pricing/index2'
 
 import Features2 from './components/Features/index2'
 import Features3 from './components/Features/index3'
@@ -34,16 +35,18 @@ export const App = () => {
 
 			<Home />
 
+			<Features3 />
+
+			<Pricing />
+			<Pricing2 />
+
 			<InlineWidget {...calendlyProps} />
 			<PopupWidget {...calendlyProps} />
 
-			<Pricing />
-
 			{/* <Features2/> */}
-			<Features3 />
 			<Features4 />
 
-			<Testimonials />
+			{/* <Testimonials /> */}
 			<Testimonials2 />
 
 			<Footer />
