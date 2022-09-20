@@ -37,7 +37,7 @@ export const App = () => {
 
 			<Features3 />
 
-			<Pricing />
+			{/* <Pricing /> */}
 			<Pricing2 />
 
 			<InlineWidget {...calendlyProps} />
