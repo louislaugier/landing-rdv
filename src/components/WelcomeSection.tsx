@@ -1,7 +1,8 @@
 import Typed from 'react-typed'
-import './index.css'
+
 import { Heading } from '@chakra-ui/react'
-import messenger from './../../illustrations/messenger.svg'
+
+import messenger from './../illustrations/mail_delivery.svg'
 
 export default function Home() {
 	return (

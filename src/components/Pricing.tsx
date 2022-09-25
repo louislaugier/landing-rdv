@@ -1,5 +1,7 @@
 import { ReactNode } from 'react'
+
 import { Box, Stack, HStack, Heading, Text, VStack, useColorModeValue, List, ListItem, ListIcon, Button } from '@chakra-ui/react'
+
 import { FaCheckCircle } from 'react-icons/fa'
 
 function PriceWrapper({ children }: { children: ReactNode }) {

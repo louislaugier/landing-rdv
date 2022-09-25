@@ -1,5 +1,7 @@
-import { Box, chakra, Container, Link, SimpleGrid, Stack, Text, VisuallyHidden, Input, IconButton, useColorModeValue } from '@chakra-ui/react'
 import { ReactNode } from 'react'
+
+import { Box, chakra, Container, Link, SimpleGrid, Stack, Text, VisuallyHidden, Input, IconButton, useColorModeValue } from '@chakra-ui/react'
+
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { BiMailSend } from 'react-icons/bi'
 
@@ -95,16 +97,17 @@ export default function Footer() {
 								placeholder={'Your email address'}
 								bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
 								border={0}
+								focusBorderColor='#6C63FF'
 								_focus={{
 									bg: 'whiteAlpha.300'
 								}}
 							/>
 							<IconButton
-								bg={useColorModeValue('green.400', 'green.800')}
-								color={useColorModeValue('white', 'gray.800')}
+								bg={'#6C63FF'}
 								_hover={{
-									bg: 'green.600'
+									bg: '#100D26'
 								}}
+								color='white'
 								aria-label='Subscribe'
 								icon={<BiMailSend />}
 							/>

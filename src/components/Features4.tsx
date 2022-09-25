@@ -33,7 +33,14 @@ export default function Features4() {
 						<chakra.h2 fontSize='3xl' fontWeight='700'>
 							Medium length title
 						</chakra.h2>
-						<Button colorScheme='green' size='md'>
+						<Button
+							color='white'
+							bg='#6C63FF'
+							_hover={{
+								bg: '#100D26'
+							}}
+							size='md'
+						>
 							Call To Action
 						</Button>
 					</VStack>

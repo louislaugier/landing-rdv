@@ -1,7 +1,17 @@
 .calendly-inline-widget{
-	height: 646px !important;
+	width: 98.5vw !important;
+}
+
+@media all and (min-width: 1015px) {
+	.calendly-inline-widget{
+		min-height: 646px !important
+	}
 }
 
 #onetrust-consent-sdk{
 	display: none;
+}
+
+.typed-cursor {
+	color: #6C63FF;
 }

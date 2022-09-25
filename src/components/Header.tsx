@@ -1,5 +1,5 @@
 import { Box, Flex, Text, IconButton, Button, Stack, Collapse, Icon, Link, Popover, PopoverTrigger, PopoverContent, useColorModeValue, useBreakpointValue, useDisclosure } from '@chakra-ui/react'
-import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon } from '@chakra-ui/icons'
+import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon, MoonIcon } from '@chakra-ui/icons'
 
 export default function Header() {
 	const { isOpen, onToggle } = useDisclosure()
@@ -12,7 +12,7 @@ export default function Header() {
 				</Flex>
 				<Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
 					<Text textAlign={useBreakpointValue({ base: 'center', md: 'left' })} fontFamily={'heading'} color={useColorModeValue('gray.800', 'white')}>
-						Logo
+						Logo facteurweb.fr
 					</Text>
 
 					<Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -29,12 +29,21 @@ export default function Header() {
 						fontSize={'sm'}
 						fontWeight={600}
 						color={'white'}
-						bg={'pink.400'}
+						bg={'#6C63FF'}
 						_hover={{
-							bg: 'pink.300'
+							bg: '#100D26'
 						}}
 					>
 						Prendre rendez-vous
+					</Button>
+					<Button
+						bg={'#100D26'}
+						_hover={{
+							bg: '#100D26'
+						}}
+						color='white'
+					>
+						<MoonIcon />
 					</Button>
 				</Stack>
 			</Flex>
@@ -93,13 +102,13 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 		<Link href={href} role={'group'} display={'block'} p={2} rounded={'md'} _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
 			<Stack direction={'row'} align={'center'}>
 				<Box>
-					<Text transition={'all .3s ease'} _groupHover={{ color: 'pink.400' }} fontWeight={500}>
+					<Text transition={'all .3s ease'} _groupHover={{ color: '#6C63FF' }} fontWeight={500}>
 						{label}
 					</Text>
 					<Text fontSize={'sm'}>{subLabel}</Text>
 				</Box>
 				<Flex transition={'all .3s ease'} transform={'translateX(-10px)'} opacity={0} _groupHover={{ opacity: '100%', transform: 'translateX(0)' }} justify={'flex-end'} align={'center'} flex={1}>
-					<Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
+					<Icon color={'#6C63FF'} w={5} h={5} as={ChevronRightIcon} />
 				</Flex>
 			</Stack>
 		</Link>
@@ -175,7 +184,7 @@ const NAV_ITEMS: Array<NavItem> = [
 		]
 	},
 	{
-		label: 'Pricing',
+		label: 'Prix',
 		href: '#'
 	},
 	{
@@ -203,9 +212,9 @@ const NAV_ITEMS: Array<NavItem> = [
 			},
 			{
 				label: 'Emplois',
-				subLabel: 'Intégrer facteurweb.fr',
+				subLabel: "Intégrer l'équipe de facteurweb.fr",
 				href: '#'
-			},
+			}
 		]
 	},
 	{

@@ -16,7 +16,7 @@ export default function Features3() {
 			<Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
 				{/* <Heading fontSize={'3xl'}>This is the headline</Heading> */}
 				<Text color={'gray.600'} fontSize={'xl'}>
-					Facteur Web est une agence web créée en 2022 qui vous accompagne dans la digitalisation de votre activité
+					Facteur Web est une agence web créée en 2022 qui vous accompagne dans la digitalisation de votre activité. Nous faisons une seule chose et nous la faisons bien : créer et maintenir votre site web.
 				</Text>
 			</Stack>
 
@@ -24,7 +24,7 @@ export default function Features3() {
 				<SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
 					{features.map((feature) => (
 						<HStack key={feature.id} align={'top'}>
-							<Box color={'green.400'} px={2}>
+							<Box color={'#6C63FF'} px={2}>
 								<Icon as={CheckIcon} />
 							</Box>
 							<VStack align={'start'}>

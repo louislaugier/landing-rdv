@@ -8,33 +8,34 @@ import {
 	ListItem,
 	Stack,
 	Text,
-	useColorModeValue,
+	// useColorModeValue,
   } from '@chakra-ui/react';
+  
   import { FaCheckCircle } from 'react-icons/fa';
   
-  const options = [
+  const options1 = [
+	{ id: 1, desc: 'Convient pour un site vitrine' },
+	{ id: 2, desc: 'Livraison sous 72h ouvrées' },
+	{ id: 3, desc: '5 ans de maintenance et hébergement offerts' },
+	{ id: 3, desc: 'Satisfait ou remboursé' },
+  ];
+  const options2 = [
 	{ id: 1, desc: '1 lorem ipsum' },
 	{ id: 2, desc: 'Lorem, ipsum dolor.' },
 	{ id: 3, desc: 'Monthly Updates' },
   ];
+
   interface PackageTierProps {
 	title: string;
 	options: Array<{ id: number; desc: string }>;
 	typePlan: string;
-	checked?: boolean;
   }
   const PackageTier = ({
 	title,
 	options,
 	typePlan,
-	checked = false,
   }: PackageTierProps) => {
-	const colorTextLight = checked ? 'white' : 'purple.600';
-	const bgColorLight = checked ? 'purple.400' : 'gray.300';
-  
-	const colorTextDark = checked ? 'white' : 'purple.500';
-	const bgColorDark = checked ? 'purple.400' : 'gray.300';
-  
+
 	return (
 	  <Stack
 		p={3}
@@ -52,7 +53,7 @@ import {
 		<List spacing={3} textAlign="start">
 		  {options.map((desc, id) => (
 			<ListItem key={desc.id}>
-			  <ListIcon as={FaCheckCircle} color="green.500" />
+			  <ListIcon as={FaCheckCircle} color="#6C63FF" />
 			  {desc.desc}
 			</ListItem>
 		  ))}
@@ -61,9 +62,23 @@ import {
 		<Stack>
 		  <Button
 			size="md"
-			color={useColorModeValue(colorTextLight, colorTextDark)}
-			bgColor={useColorModeValue(bgColorLight, bgColorDark)}>
-			Get Started
+			bg={'#6C63FF'}
+			color={'white'}
+			_hover={{
+				bg: '#100D26'
+			}}
+		>
+			{typePlan ===  'Sur devis' ? 'Prendre rendez-vous' : 'Vérifier l\'égibilité'}
+		  </Button>
+		  <Button
+			size="md"
+			bg={'#100D26'}
+			color={'white'}
+			_hover={{
+				bg: '#100D26'
+			}}
+		>
+			En savoir plus
 		  </Button>
 		</Stack>
 	  </Stack>
@@ -91,7 +106,7 @@ import {
 			  }}
 			  textAlign={'center'}>
 			  <Heading size={'lg'}>
-				The Right Plan for <Text color="purple.400">Your Business</Text>
+				Une offre adaptée à <Text color="#6C63FF">vos besoins</Text>
 			  </Heading>
 			</Stack>
 			<Stack
@@ -100,23 +115,14 @@ import {
 				md: '60%',
 			  }}>
 			  <Text textAlign={'center'}>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-				quod in iure vero. Facilis magnam, sed officiis commodi labore
-				odit.
+				Pour l'achat d'un site web, nous vous offrons <Text fontWeight={800} color="#6C63FF">5 ans de nom de domaine gratuit</Text>
 			  </Text>
 			</Stack>
 		  </Stack>
 		  <Divider />
-		  <PackageTier title={'Starter'} typePlan="Free" options={options} />
+		  <PackageTier title={'Starter'} typePlan="999€ TTC" options={options1} />
 		  <Divider />
-		  <PackageTier
-			title={'Lorem Plus'}
-			checked={true}
-			typePlan="$32.00"
-			options={options}
-		  />
-		  <Divider />
-		  <PackageTier title={'Lorem Pro'} typePlan="$50.00" options={options} />
+		  <PackageTier title={'Sur-mesure'} typePlan="Sur devis" options={options2}/>
 		</Stack>
 	  </Box>
 	);
