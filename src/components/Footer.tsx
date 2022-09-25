@@ -5,6 +5,8 @@ import { Box, chakra, Container, Link, SimpleGrid, Stack, Text, VisuallyHidden, 
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { BiMailSend } from 'react-icons/bi'
 
+import { primary, secondary } from '../Palette'
+
 const Logo = (props: any) => {
 	return (
 		<svg height={32} viewBox='0 0 120 28' xmlns='http://www.w3.org/2000/svg' {...props}>
@@ -97,15 +99,15 @@ export default function Footer() {
 								placeholder={'Your email address'}
 								bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
 								border={0}
-								focusBorderColor='#6C63FF'
+								focusBorderColor={primary}
 								_focus={{
 									bg: 'whiteAlpha.300'
 								}}
 							/>
 							<IconButton
-								bg={'#6C63FF'}
+								bg={primary}
 								_hover={{
-									bg: '#100D26'
+									bg: secondary
 								}}
 								color='white'
 								aria-label='Subscribe'

@@ -1,6 +1,8 @@
 import { Box, VStack, Button, Flex, Divider, chakra, Grid, GridItem, Container } from '@chakra-ui/react'
 import {} from '@chakra-ui/react'
 
+import { primary, secondary } from '../Palette'
+
 interface FeatureProps {
 	heading: string
 	text: string
@@ -35,9 +37,9 @@ export default function Features4() {
 						</chakra.h2>
 						<Button
 							color='white'
-							bg='#6C63FF'
+							bg={primary}
 							_hover={{
-								bg: '#100D26'
+								bg: secondary
 							}}
 							size='md'
 						>

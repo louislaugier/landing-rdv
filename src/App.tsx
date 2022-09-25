@@ -1,5 +1,7 @@
 // import { useState } from 'react'
 
+import { primary } from './Palette'
+
 import { ChakraProvider, theme } from '@chakra-ui/react'
 
 import { InlineWidget, PopupWidget } from 'react-calendly'
@@ -29,7 +31,7 @@ export const App = () => {
 		rootElement: document.getElementById('root'),
 		text: 'Prendre rendez-vous',
 		textColor: 'white',
-		color: '#6C63FF'
+		color: primary
 	}
 
 	return (

@@ -1,6 +1,8 @@
 import { Box, Container, Heading, SimpleGrid, Icon, Text, Stack, HStack, VStack } from '@chakra-ui/react'
 import { CheckIcon } from '@chakra-ui/icons'
 
+import { primary } from '../Palette'
+
 // Replace test data with your own
 const features = Array.apply(null, Array(8)).map(function (x, i) {
 	return {
@@ -24,7 +26,7 @@ export default function Features3() {
 				<SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
 					{features.map((feature) => (
 						<HStack key={feature.id} align={'top'}>
-							<Box color={'#6C63FF'} px={2}>
+							<Box color={primary} px={2}>
 								<Icon as={CheckIcon} />
 							</Box>
 							<VStack align={'start'}>

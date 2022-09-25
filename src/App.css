@@ -9,9 +9,13 @@
 }
 
 #onetrust-consent-sdk{
-	display: none;
+	display: none !important;
 }
 
 .typed-cursor {
 	color: #6C63FF;
+}
+
+li.css-0 {
+	max-width: 415px;
 }

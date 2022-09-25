@@ -1,6 +1,8 @@
 import { Box, Flex, Text, IconButton, Button, Stack, Collapse, Icon, Link, Popover, PopoverTrigger, PopoverContent, useColorModeValue, useBreakpointValue, useDisclosure } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon, MoonIcon } from '@chakra-ui/icons'
 
+import { primary, secondary } from '../Palette'
+
 export default function Header() {
 	const { isOpen, onToggle } = useDisclosure()
 
@@ -29,17 +31,17 @@ export default function Header() {
 						fontSize={'sm'}
 						fontWeight={600}
 						color={'white'}
-						bg={'#6C63FF'}
+						bg={primary}
 						_hover={{
-							bg: '#100D26'
+							bg: secondary
 						}}
 					>
 						Prendre rendez-vous
 					</Button>
 					<Button
-						bg={'#100D26'}
+						bg={secondary}
 						_hover={{
-							bg: '#100D26'
+							bg: secondary
 						}}
 						color='white'
 					>
@@ -102,13 +104,13 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 		<Link href={href} role={'group'} display={'block'} p={2} rounded={'md'} _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
 			<Stack direction={'row'} align={'center'}>
 				<Box>
-					<Text transition={'all .3s ease'} _groupHover={{ color: '#6C63FF' }} fontWeight={500}>
+					<Text transition={'all .3s ease'} _groupHover={{ color: primary }} fontWeight={500}>
 						{label}
 					</Text>
 					<Text fontSize={'sm'}>{subLabel}</Text>
 				</Box>
 				<Flex transition={'all .3s ease'} transform={'translateX(-10px)'} opacity={0} _groupHover={{ opacity: '100%', transform: 'translateX(0)' }} justify={'flex-end'} align={'center'} flex={1}>
-					<Icon color={'#6C63FF'} w={5} h={5} as={ChevronRightIcon} />
+					<Icon color={primary} w={5} h={5} as={ChevronRightIcon} />
 				</Flex>
 			</Stack>
 		</Link>
