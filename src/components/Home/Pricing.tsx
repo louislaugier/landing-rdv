@@ -10,10 +10,8 @@ import {
 	Text
 	// useColorModeValue,
 } from '@chakra-ui/react'
-
 import { FaCheckCircle } from 'react-icons/fa'
-
-import { primary, secondary } from '../Palette'
+import { primary, secondary } from '../../style/Palette'
 
 const options1 = [
 	{ id: 1, desc: 'Sous conditions*' },

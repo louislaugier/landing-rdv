@@ -1,11 +1,8 @@
 import { ReactNode } from 'react'
-
 import { Box, chakra, Container, Link, SimpleGrid, Stack, Text, VisuallyHidden, Input, IconButton, useColorModeValue, Tooltip } from '@chakra-ui/react'
-
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { BiMailSend } from 'react-icons/bi'
-
-import { primary, secondary } from '../Palette'
+import { primary, secondary } from '../style/Palette'
 
 const Logo = (props: any) => {
 	return (
@@ -86,14 +83,14 @@ export default function Footer() {
 					</Stack> */}
 					<Stack align={'flex-start'}>
 						<ListHeader>Ressources</ListHeader>
-						<Link href={'#'}>FAQ</Link>
+						<Link href={'faq'}>FAQ</Link>
 						<Tooltip label='À venir'>
 							<Text>
 								Emplois
 							</Text>
 						</Tooltip>
-						<Link href={'#'}>Mentions légales</Link>
-						<Link href={'#'}>Politique de confidentialité</Link>
+						<Link href={'mentions-legales'}>Mentions légales</Link>
+						<Link href={'politique-de-confidentialite'}>Politique de confidentialité</Link>
 					</Stack>
 					<Stack align={'flex-start'}>
 						<ListHeader>Stay up to date</ListHeader>

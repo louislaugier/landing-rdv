@@ -1,7 +1,6 @@
 import { Box, Flex, Text, IconButton, Button, Stack, Collapse, Icon, Link, Popover, PopoverTrigger, PopoverContent, useColorModeValue, useBreakpointValue, useDisclosure, Tooltip } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon, MoonIcon } from '@chakra-ui/icons'
-
-import { primary, secondary } from '../Palette'
+import { primary, secondary } from '../style/Palette'
 
 export default function Header() {
 	const { isOpen, onToggle } = useDisclosure()
@@ -176,14 +175,14 @@ const NAV_ITEMS: Array<NavItem> = [
 		label: 'Produits',
 		children: [
 			{
-				label: 'Site web clé-en-main',
+				label: 'Offre Starter',
 				subLabel: 'Abordable et livré rapidement',
-				href: '#'
+				href: 'starter'
 			},
 			{
-				label: 'Site web sur-mesure',
+				label: 'Offre Sur-Mesure',
 				subLabel: 'Un site web réellement à la carte',
-				href: '#'
+				href: 'sur-mesure'
 			}
 		]
 	},
@@ -198,12 +197,12 @@ const NAV_ITEMS: Array<NavItem> = [
 			{
 				label: 'Mentions légales',
 				subLabel: 'facteurweb.fr',
-				href: '#'
+				href: 'mentions-legales'
 			},
 			{
 				label: 'FAQ',
 				subLabel: 'Frequently asked questions',
-				href: '#'
+				href: 'faq'
 			},
 			{
 				label: 'Emplois',

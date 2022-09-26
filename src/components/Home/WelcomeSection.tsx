@@ -1,9 +1,7 @@
 import Typed from 'react-typed'
-
 import { Heading } from '@chakra-ui/react'
-
-import messenger from './../illustrations/mail_delivery.svg'
-import { secondary } from '../Palette'
+import mailDelivery from './../../assets/illustrations/mail_delivery.svg'
+import { secondary } from '../../style/Palette'
 
 export default function WelcomeSection() {
 	return (
@@ -14,7 +12,7 @@ export default function WelcomeSection() {
 			</Heading>
 			</div>
 			<div style={{width: '50vw', padding: '0 100px', display: 'flex', }}>
-				<img style={{width: 400}} className='svg-illu' src={messenger} alt=''/>
+				<img style={{width: 400}} className='svg-illu' src={mailDelivery} alt=''/>
 			</div>
 		</div>
 	)

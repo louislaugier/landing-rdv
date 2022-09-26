@@ -1,6 +1,5 @@
 import { Box, VStack, Button, Flex, Divider, chakra, Grid, GridItem, Container, Text } from '@chakra-ui/react'
-
-import { primary, secondary } from '../Palette'
+import { primary, secondary } from '../../style/Palette'
 
 interface FeatureProps {
 	heading: string
