@@ -1,4 +1,4 @@
-import { Box, Flex, Text, IconButton, Button, Stack, Collapse, Icon, Link, Popover, PopoverTrigger, PopoverContent, useColorModeValue, useBreakpointValue, useDisclosure } from '@chakra-ui/react'
+import { Box, Flex, Text, IconButton, Button, Stack, Collapse, Icon, Link, Popover, PopoverTrigger, PopoverContent, useColorModeValue, useBreakpointValue, useDisclosure, Tooltip } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon, MoonIcon } from '@chakra-ui/icons'
 
 import { primary, secondary } from '../Palette'
@@ -99,9 +99,9 @@ const DesktopNav = () => {
 	)
 }
 
-const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
-	return (
-		<Link href={href} role={'group'} display={'block'} p={2} rounded={'md'} _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+const DesktopSubNav = ({ label, href, subLabel }: any) => {
+	const link: any = (
+		<Link style={{opacity: label === 'Emplois' ? 0.5 : 1}} href={href} role={'group'} display={'block'} p={2} rounded={'md'} _hover={{ bg: useColorModeValue('purple.50', 'gray.900') }}>
 			<Stack direction={'row'} align={'center'}>
 				<Box>
 					<Text transition={'all .3s ease'} _groupHover={{ color: primary }} fontWeight={500}>
@@ -115,6 +115,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 			</Stack>
 		</Link>
 	)
+	return label === 'Emplois' ? <Tooltip label='À venir'>{link}</Tooltip> : <>{link}</>
 }
 
 const MobileNav = () => {
@@ -186,10 +187,6 @@ const NAV_ITEMS: Array<NavItem> = [
 		]
 	},
 	{
-		label: 'Prix',
-		href: '#'
-	},
-	{
 		label: 'Ressources',
 		children: [
 			// {
@@ -200,11 +197,6 @@ const NAV_ITEMS: Array<NavItem> = [
 			{
 				label: 'Mentions légales',
 				subLabel: 'facteurweb.fr',
-				href: '#'
-			},
-			{
-				label: 'Témoignages',
-				subLabel: 'Les retours client',
 				href: '#'
 			},
 			{

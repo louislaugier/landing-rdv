@@ -1,21 +1,8 @@
-.calendly-inline-widget{
-	width: 98.5vw !important;
-}
-
-@media all and (min-width: 1015px) {
-	.calendly-inline-widget{
-		min-height: 646px !important
-	}
-}
-
-#onetrust-consent-sdk{
-	display: none !important;
-}
-
 .typed-cursor {
 	color: #6C63FF;
 }
 
+/* pricing list item alignment */
 li.css-0 {
 	max-width: 415px;
 }
