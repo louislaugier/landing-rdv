@@ -114,7 +114,6 @@ const DesktopSubNav = ({ label, href, subLabel }: any) => {
 				</Flex>
 			</Stack>
 		</Link>
-		
 	)
 	return label === 'Emplois' ? <Tooltip label='À venir'>{link}</Tooltip> : <>{link}</>
 }
